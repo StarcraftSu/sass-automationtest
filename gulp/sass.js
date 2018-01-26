@@ -1,17 +1,18 @@
    var gulp = require('gulp'),
-       sass = require('gulp-ruby-sass'),
-       concat = require('gulp-concat');
+    //    sass = require('gulp-ruby-sass');
+       sass = require('gulp-sass'),
+       autoprefixer = require('gulp-autoprefixer');
+       
+
 
        gulp.task('sass',function(){
-           sass('./scss/**/*.scss')
-           .on('error', sass.logError)
+           console.log('transform scss file to css file');
+           return gulp.src('./scss/**/*.scss')
+           .pipe(sass().on('error', sass.logError))
+           .pipe(autoprefixer())
            .pipe(gulp.dest('./css'));
        });
 
-       gulp.task('concat',['sass'],function(){
-           gulp.src('./css/**/*.css')
-           .pipe(concat('styles.css'))
-           .pipe(gulp.dest('./css'));
-       });
+
 
     

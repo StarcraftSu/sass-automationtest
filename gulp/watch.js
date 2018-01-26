@@ -11,7 +11,7 @@ gulp.task('watch',function(){
 		}
 	});
 
-	watch("./index.html",function(){
+	watch("./*.html",function(){
 		browserSync.reload();
 	});
 
@@ -25,7 +25,7 @@ gulp.task('watch',function(){
 	// })
 });
 
-gulp.task('cssInject',['concat'],function(){
-	return gulp.src('./css/**/*.css')
+gulp.task('cssInject',['sass'],function(){
+	return gulp.src('./temp/style/styles.css')
 	.pipe(browserSync.stream());
 });
