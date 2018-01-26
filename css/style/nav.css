@@ -19,7 +19,7 @@ nav {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
     nav ul li {
-      color: brown;
+      color: yellow;
       cursor: pointer;
       -ms-flex-preferred-size: 10rem;
           flex-basis: 10rem;
