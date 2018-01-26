@@ -1,0 +1,17 @@
+$white:#fff;
+$darkGray:#333;
+nav{
+    width:100%;
+    text-align: center;
+    h1{
+        color:$darkGray; 
+    }
+    p{
+        color:$white;
+    }
+    ul{
+        li{
+            list-style: none;
+        }
+    }
+}
